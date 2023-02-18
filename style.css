@@ -105,3 +105,10 @@ color: #E0B612;
     color: #FF3C5F;
     margin-top: 10px;
 }
+
+
+@media only screen and (max-width:575px) {
+    .notify-section {
+        width:80%;
+    }
+}
