@@ -1,3 +1,4 @@
+let randomPin;
 function getElement(id) {
     return document.getElementById(id);
 }
@@ -16,7 +17,9 @@ function generateRandomNumber() {
     return randomNumber;
 }
 getElement('pin-generator-btn').addEventListener('click',function(){
-    getElement('generator-input').value = generateRandomNumber();
+    getElement('generator-input').value = ''
+    randomPin= generateRandomNumber();
+    console.log(randomPin)
 })
 
 
@@ -40,19 +43,20 @@ getElement('calculator-container').addEventListener('click',function (event) {
 })
 
 getElement('pin-checker').addEventListener('click',function () {
-    const generatedPinValue = getFieldValue('generator-input',true);
+    const generatorInputField = getElement('generator-input');
     const calculatorInputValue = getFieldValue('calculator-input',true);
     let successField = getElement('success-message');
     let unSuccessField = getElement('unsuccess-message');
     let calculatorField = getElement('calculator-input');
-    if(generatedPinValue === calculatorInputValue) {
-        console.log("success")
+    if(randomPin === calculatorInputValue) {
+        generatorInputField.value = randomPin;
         getElement('success-message').style.display = 'block';
         unSuccessField.style.display = 'none';
         calculatorField.value = ''
     }
 
     else {
+        generatorInputField.value = randomPin;
         unSuccessField.style.display = 'block';
         successField.style.display = 'none';
         calculatorField.value = ''
