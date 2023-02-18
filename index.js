@@ -19,7 +19,6 @@ function generateRandomNumber() {
 getElement('pin-generator-btn').addEventListener('click',function(){
     getElement('generator-input').value = ''
     randomPin= generateRandomNumber();
-    console.log(randomPin)
 })
 
 
