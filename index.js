@@ -17,7 +17,7 @@ function generateRandomNumber() {
     return randomNumber;
 }
 getElement('pin-generator-btn').addEventListener('click',function(){
-    getElement('generator-input').value = 'Pin Generated!!! Please Guess your number'
+    getElement('generator-input').value = 'Pin Generated!Please Guess your 3 digit number'
     randomPin= generateRandomNumber();
 })
 
