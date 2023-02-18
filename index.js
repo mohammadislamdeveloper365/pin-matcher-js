@@ -21,7 +21,6 @@ getElement('pin-generator-btn').addEventListener('click',function(){
     randomPin= generateRandomNumber();
 })
 
-
 getElement('calculator-container').addEventListener('click',function (event) {
     const number = event.target.innerText;
     let inputFieldValue = getFieldValue('calculator-input',true);
