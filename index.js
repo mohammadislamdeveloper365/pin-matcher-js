@@ -17,7 +17,7 @@ function generateRandomNumber() {
     return randomNumber;
 }
 getElement('pin-generator-btn').addEventListener('click',function(){
-    getElement('generator-input').value = ''
+    getElement('generator-input').value = 'Pin Generated!!! Please Guess your number'
     randomPin= generateRandomNumber();
 })
 
@@ -48,14 +48,14 @@ getElement('pin-checker').addEventListener('click',function () {
     let unSuccessField = getElement('unsuccess-message');
     let calculatorField = getElement('calculator-input');
     if(randomPin === calculatorInputValue) {
-        generatorInputField.value = randomPin;
+        generatorInputField.value = "You won!!!Pin Matched";
         getElement('success-message').style.display = 'block';
         unSuccessField.style.display = 'none';
         calculatorField.value = ''
     }
 
     else {
-        generatorInputField.value = randomPin;
+        generatorInputField.value = "You Lost!!! The pin was: " + randomPin;
         unSuccessField.style.display = 'block';
         successField.style.display = 'none';
         calculatorField.value = ''
