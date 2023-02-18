@@ -11,8 +11,8 @@ function getFieldValue(id, isInput) {
 }
 function generateRandomNumber() {
     let randomNumber =  Math.round(Math.random()*10000).toString();
-    while(randomNumber.length !== 4){
-        randomNumber = Math.round(Math.random()*10000).toString();
+    while(randomNumber.length !== 3){
+        randomNumber = Math.round(Math.random()*1000).toString();
     }
     return randomNumber;
 }
